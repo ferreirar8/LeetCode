@@ -1,21 +1,13 @@
 class Solution {
 public:
-    bool isPalindrome(int x) {
-        // If x is negative or if x ends in 0 (but is not 0 itself), it's not a palindrome
-        if (x < 0 || (x % 10 == 0 && x != 0)) {
-            return false;
+    bool isPalindrome(long long int x) {
+        long long int revnum = 0; 
+        long long int duck = x;
+        while (x > 0){
+            int lastdigit = x % 10;
+            revnum = (revnum*10)+lastdigit;
+            x =  x/10;
         }
-
-        int reversedHalf = 0;
-        while (x > reversedHalf) {
-            // Extract the last digit of x and add it to reversedHalf
-            reversedHalf = reversedHalf * 10 + x % 10;
-            // Remove the last digit from x
-            x /= 10;
-        }
-
-        // Compare the original first half with the reversed second half
-        // For odd digit length, discard the middle digit by reversedHalf/10
-        return x == reversedHalf || x == reversedHalf / 10;
+    return (duck == revnum);
     }
 };
