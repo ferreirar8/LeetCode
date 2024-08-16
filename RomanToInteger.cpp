@@ -11,7 +11,7 @@ public:
         int n = s.length();
         for(int i = 0; i < n; i++){
             int currentValue = romanMap[s[i]];
-
+            
             if (i < n - 1 && currentValue < romanMap[s[i+1]]){
                 total-= currentValue;
             } else {
