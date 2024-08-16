@@ -9,10 +9,8 @@ public:
             int min_current = arrays[i].front();
             int max_current = arrays[i].back();
             
-            // Calculate max distance using elements from different arrays
             max_distance = max(max_distance, max(abs(max_current - min_so_far), abs(max_so_far - min_current)));
-            
-            // Update min_so_far and max_so_far
+
             min_so_far = min(min_so_far, min_current);
             max_so_far = max(max_so_far, max_current);
         }
