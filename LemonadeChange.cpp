@@ -7,14 +7,14 @@ public:
     int count_10 = 0;
     for (int i = 0; i < n; i++) {
         if (bills[i] == 5) {
-            count_5 += 1;
+            count_5 ++;
         }else if (bills[i] == 10) {
-            count_10 += 1;
-            count_5 -= 1;
-        }else if (bills[i] == 20) {
+            count_10 ++ ;
+            count_5 --;
+        }else{
             if (count_10 > 0) {
-                count_10 -= 1;
-                count_5 -= 1;
+                count_10 --;
+                count_5 --;
             } else {
                 count_5 -=3;
             }
