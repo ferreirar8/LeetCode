@@ -10,7 +10,7 @@ public:
             max_distance = max(max_distance, abs(biggest - arrays[i][0]));
             smallest = min(smallest, arrays[i][0]);
             biggest = max(biggest, arrays[i].back());
-        }
+        } 
         return max_distance;
     }
 };
